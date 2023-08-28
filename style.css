@@ -1,0 +1,93 @@
+body {
+  background: #181818;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(250, 245, 245);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 350px;
+  height: 350px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px 0 rgb(154, 154, 232);
+}
+.card-image {
+  position: absolute;
+  top: 20%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover .card-image {
+  transform: translate(-130px, -60px);
+  width: 60px;
+  height: 60px;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover h2 {
+  transition: all 0.5s ease-in-out;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+.card h4 {
+  margin: 0;
+}
+.about {
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: #181818;
+  transition: all 0.5s ease-in-out;
+}
+.skills {
+  opacity: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.skill {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #181818;
+  border-radius: 10px;
+  padding: 3px;
+}
+.point {
+  height: 15px;
+  width: 20px;
+  border-radius: 5px;
+  background: rgb(154, 154, 232);
+}
+.card:hover .about,
+.card:hover .skills {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
